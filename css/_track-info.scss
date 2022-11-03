@@ -9,3 +9,20 @@
         font-weight: 300;
     }
 }
+
+@media (max-width:560px) {
+    .track-info {
+        &_title {
+            font-size: 14px;
+            margin-bottom: 4px;
+    
+            &__artist {
+                font-size: 12px;
+            }
+        }
+
+        &_mobile-center {
+            text-align: center;
+        }
+    }
+}

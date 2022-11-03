@@ -15,8 +15,41 @@
         grid-column: 1 / -1;
         display: flex;
         align-items: center;
+        justify-content: end;
         gap: 8px;
         margin-left: auto;
         font-weight: 600;
+        transition: color .25s ease-in-out;
+        padding: 16px 0;
+
+        &:hover {
+            color: #cec1c1;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .catalog {
+        &__container {
+            padding: 0 14px;
+        }
+
+    }
+}
+
+@media (max-width: 560px) {
+    .catalog {
+
+        &__container {
+            padding: 0 11px;
+            grid-template-columns: repeat(auto-fill, 148px);
+            gap: 2px;
+        }
+
+        &__btn-add {
+            padding: 12px 0;
+            font-size: 14px;
+            gap: 4px;
+        }
     }
 }
