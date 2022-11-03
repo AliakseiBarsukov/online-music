@@ -1,0 +1,172 @@
+.player {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    max-width: 1228px;
+    margin: 0 auto;
+    transition: bottom .5s ease;
+    padding: 24px;
+
+    &_active {
+        bottom: 26px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    &__controller {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-color .3s ease-in-out;
+        line-height: 0;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.319);
+        }
+
+        &-stop {
+            background-image: url('./../assets/img/stop.svg');
+        }
+        &-prev {
+            background-image: url('./../assets/img/prev.svg');
+        }
+        &-pause {
+            background-image: url('./../assets/img/pause.svg');
+        }
+        &-play {
+            background-image: url('./../assets/img/play.svg');
+        }
+        &-next {
+            background-image: url('./../assets/img/next.svg');
+        }
+        &-like {
+            background-image: url('./../assets/img/like.svg');
+        }
+    }
+
+    &__progress-wrap {
+        display: flex;
+        align-items: center;
+        padding-right: 9px;
+        gap: 16px;
+    }
+
+    &__progress {
+        flex-grow: 1;
+        max-width: 487px;
+    }
+
+    &__progres-input {
+        width: 100%;
+        padding: 9px 0;
+        cursor: pointer;
+        background-color: transparent;
+        appearance: none;
+        -webkit-appearance: none;
+
+        &::-webkit-slider-runnable-track {
+            background-color: #1e5a32;
+            border: none;
+            border-radius: 20px;
+            height: 6px;
+        }
+
+        &:hover::-webkit-slider-runnable-track,
+        &:focus::-webkit-slider-runnable-track {
+            background-color: #e6a93f;
+            transition: background-color 0.25s ease-in-out;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            margin-top: -9px;
+            width: 12px;
+            height: 24px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            transition: background-color 0.25s ease-in-out;
+            border: 1px solid transparent;
+            transition: border-color .25s ease-in-out;
+        }
+
+        &:hover::-webkit-slider-thumb,
+        &:focus::-webkit-slider-thumb {
+            border-color: #000;
+        }
+    }
+
+    &__time {
+        display: flex;
+        gap: 4px;
+        font-size: 14px;
+    }
+
+
+
+    &__volume-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__volume {
+        background: url(./../assets/img/volume.svg) center/contain no-repeat;
+        height: 24px;
+        width: 146px;
+    }
+
+    &__volume-input {
+        background-color: transparent;
+        appearance: none;
+        -webkit-appearance: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 24px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+            border-radius: 30px;
+            transition: background-color 0.25s ease-in-out;
+            border: 1px solid transparent;
+            transition: border-color .25s ease-in-out;
+        }
+
+        &:hover::-webkit-slider-thumb,
+        &:focus::-webkit-slider-thumb {
+            border-color: #000;
+        }
+    }
+
+    &__icon {}
+
+    &__icon_mute {
+        background-image: url('./../assets/img/mute.svg');
+    }
+    &__icon_mute-off {
+        background-image: url('./../assets/img/mute-off.svg');
+    }
+}
