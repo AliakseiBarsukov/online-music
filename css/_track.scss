@@ -56,6 +56,13 @@
         }
     }
 
+    &_pause {
+        & .track__img-wrap::after {
+            transform: translate(-50%, -50%) rotateY(0);
+            background-image: url('./../assets/img/play.svg');
+        }
+    }
+
     &:hover .track__img-wrap::after,
     &:focus .track__img-wrap::after {
         opacity: 1;

@@ -261,6 +261,10 @@ h1, h2, h3, p {
 .track_active:hover .track__img-wrap::after {
   background-color: #fff;
 }
+.track_pause .track__img-wrap::after {
+  transform: translate(-50%, -50%) rotateY(0);
+  background-image: url("./../assets/img/play.svg");
+}
 .track:hover .track__img-wrap::after, .track:focus .track__img-wrap::after {
   opacity: 1;
   transform: translate(-50%, -50%) rotateY(0);
