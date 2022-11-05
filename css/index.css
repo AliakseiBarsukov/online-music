@@ -353,7 +353,7 @@ h1, h2, h3, p {
   line-height: 0;
 }
 .player__icon:hover {
-  background-color: rgba(255, 255, 255, 0.319);
+  opacity: 0.4;
 }
 .player__icon-stop {
   background-image: url("./../assets/img/stop.svg");
@@ -372,6 +372,9 @@ h1, h2, h3, p {
 }
 .player__icon-like {
   background-image: url("./../assets/img/like.svg");
+}
+.player__icon-like_active {
+  filter: drop-shadow(0 0 2px tomato);
 }
 .player__progress-wrap {
   display: flex;

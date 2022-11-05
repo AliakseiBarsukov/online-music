@@ -40,7 +40,7 @@
         line-height: 0;
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.319);
+            opacity: 0.4;
         }
 
         &-stop {
@@ -60,6 +60,10 @@
         }
         &-like {
             background-image: url('./../assets/img/like.svg');
+
+            &_active {
+                filter: drop-shadow(0 0 2px tomato);
+            }
         }
     }
 
